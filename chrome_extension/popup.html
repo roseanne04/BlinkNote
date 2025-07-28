@@ -1,0 +1,47 @@
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlinkNote Extension</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 15px; width: 320px; }
+    h3 { margin-top: 20px; }
+    input, button { margin-top: 5px; width: 100%; }
+    #processing-msg { color: #ff9800; font-style: italic; margin-top: 10px; }
+    #error-msg { color: red; margin-top: 10px; }
+    #success-msg { color: green; margin-top: 10px; }
+    .hidden { display: none; }
+    a { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h3>📄 Upload Transcript</h3>
+  <form id="upload-form">
+    <input type="file" id="meeting-file" accept=".txt" />
+    <button type="submit">Summarize Transcript</button>
+  </form>
+
+  <h3>🎥 Upload Video</h3>
+  <form id="video-form">
+    <input type="file" id="video-file" accept=".mp4,.webm" />
+    <button type="submit">Transcribe & Summarize Video</button>
+  </form>
+
+  <h3>🔴 Live Meeting Summary</h3>
+  <label>
+    <input type="checkbox" id="toggle-live-summary" />
+    Enable Live Summarization
+  </label>
+
+  <p id="processing-msg" class="hidden">⏳ Processing...</p>
+  <p id="error-msg"></p>
+  <p id="success-msg"></p>
+
+  <!-- ✅ Slack link placeholder -->
+  <a id="slack-link" href="#" target="_blank" class="hidden">📎 View Summary in Slack</a>
+
+  <a href="http://localhost:5173/" target="_blank">🌐 Open Web App</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "BlinkNote",
+  "version": "1.0",
+  "description": "Summarize meetings and push to Slack",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon1.png",
+      "48": "icon2.png",
+      "128": "icon3.png"
+    }
+  },
+  "icons": {
+    "16": "icon1.png",
+    "48": "icon2.png",
+    "128": "icon3.png"
+  }
+}
